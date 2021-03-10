@@ -8,6 +8,19 @@
 
 A contactless jukebox for the Raspberry Pi, playing audio files, playlists, podcasts, web streams and spotify triggered by RFID cards. All plug and play via USB, no soldering iron needed. Update: if you must, it now also features a howto for adding GPIO buttons controls.
 
+## Attention! This is a fork with the changes I made for my Vintage Boombox!
+Check out the Wiki for a step by step guide of how I set up my boombox. This fork will most likely not be maintained so you should check out the original repo for any changes or updates. Here you'll be able to find the changes I made specific for my setup.
+
+________________________________
+________________________________
+
+
+
+
+
+
+
+
 ![The 2020 Phoniebox Calendar](docs/2020-Phoniebox-Calendar.jpg "The 2020 Phoniebox Calendar")
 
 ## Important updates / news
