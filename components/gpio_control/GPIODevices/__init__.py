@@ -4,4 +4,5 @@ from .shutdown_button import ShutdownButton
 from .simple_button import SimpleButton
 from .two_button_control import TwoButtonControl
 from .VolumeControl import VolumeControl
+from .long_button import LongButton
 from .led import *
