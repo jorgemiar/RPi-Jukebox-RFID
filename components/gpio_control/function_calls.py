@@ -48,7 +48,9 @@ def functionCallPlayerPauseForce(*args):
 def functionCallPlayerPause(*args):
     function_call("{command} -c=playerpause".format(command=playout_control), shell=True)
 
-
+def functionCallPlayerPlay(*args):
+    function_call("{command} -c=playerplay ".format(command=playout_control), shell=True)
+    
 def functionCallRecordStart(*args):
     function_call("{command} -c=recordstart".format(command=playout_control), shell=True)
 
