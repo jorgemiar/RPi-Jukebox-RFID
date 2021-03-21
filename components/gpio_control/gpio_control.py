@@ -52,6 +52,16 @@ def generate_device(config, deviceName):
                             hold_repeat=config.getboolean('hold_repeat', False),
                             hold_time=config.getfloat('hold_time', fallback=0.3),
                             pull_up_down=config.get('pull_up_down', fallback=GPIO.PUD_UP))
+    elif device_type == 'LongButton':
+        return LongButton(config.getint('Pin'),
+                            action=getFunctionCall(config.get('functionCallp')),
+                            action2=getFunctionCall(config.get('functionCallr')),
+                            name=deviceName,
+                            bouncetime=config.getint('bouncetime', fallback=500),
+                            edge=config.get('edge', fallback='BOTH'),
+                            hold_repeat=config.getboolean('hold_repeat', False),
+                            hold_time=config.getfloat('hold_time', fallback=0.3),
+                            pull_up_down=config.get('pull_up_down', fallback=GPIO.PUD_UP))
     elif device_type == 'LED':
         return LED(config.getint('Pin'),
                             name=deviceName,
