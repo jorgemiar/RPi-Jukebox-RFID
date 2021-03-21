@@ -875,6 +875,7 @@ case $COMMAND in
         # add to playlist, no autoplay
         if [ "${DEBUG_playout_controls_sh}" == "TRUE" ]; then echo "   ${COMMAND} value:${VALUE}" >> ${PATHDATA}/../logs/debug.log; fi
         # save playlist playing
+        mpc clear
         mpc load "${VALUE}"
         ;;
     playlistappend)
