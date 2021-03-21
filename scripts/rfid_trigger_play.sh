@@ -461,9 +461,9 @@ if [ ! -z "$FOLDER" -a ! -z ${FOLDER+x} -a -d "${AUDIOFOLDERSPATH}/${FOLDER}" ];
 		# play playlist
         # the variable passed on to play is the playlist name -v (NOT the folder name)
         # because (see above) a folder can be played recursively (including subfolders) or flat (only containing files)
-        # load new playlist and play
-        $PATHDATA/playout_controls.sh -c=playlistaddplay -v="${PLAYLISTNAME}" -d="${FOLDER}"
-        if [ "${DEBUG_rfid_trigger_play_sh}" == "TRUE" ]; then echo "  Command: $PATHDATA/playout_controls.sh -c=playlistaddplay -v=\"${PLAYLISTNAME}\" -d=\"${FOLDER}\"" >> $PATHDATA/../logs/debug.log; fi
+        # load new playlist. Don't play.
+        $PATHDATA/playout_controls.sh -c=playlistadd -v="${PLAYLISTNAME}" -d="${FOLDER}"
+        if [ "${DEBUG_rfid_trigger_play_sh}" == "TRUE" ]; then echo "  Command: $PATHDATA/playout_controls.sh -c=playlistadd -v=\"${PLAYLISTNAME}\" -d=\"${FOLDER}\"" >> $PATHDATA/../logs/debug.log; fi
         # save latest playlist not to file
         sudo echo ${PLAYLISTNAME} > $PATHDATA/../settings/Latest_Playlist_Played
         sudo chown pi:www-data $PATHDATA/../settings/Latest_Playlist_Played
